@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Só mágica :D v2</title>
+    <style>
+        input{
+            border-radius: 5px;
+            border-color: orangered;
+            /* background-color: #aa5035; */
+            background-color: #df4e39;
+        }
+        button{
+            background-color: #df4e39;
+            border-radius: 5px;
+        }
+
+        body{
+            background-color: #000000;
+            color: whitesmoke;
+            /* font-size: 20px; */
+            /* font-family: sans-serif; */
+        }
+        a{
+            color: whitesmoke;
+        }
+        *:hover{
+            /* border-color: tomato; */
+            border-color: whitesmoke;
+        }
+
+        /* #chkEnter {
+            
+        } */
+        #chkEnter{
+            all: unset;
+            border: 1px solid orangered;
+            width: 15px;
+            height: 10px;
+            display: inline-block;
+            color: whitesmoke;
+        }
+        #chkEnter:checked {
+            background-color: orangered;
+            width: 15px;
+            height: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    Digita aí os números e deixe a mágica acoontecer :D <BR><BR>
+    &nbsp&nbspDDD1: <input type="text" id="inpddd1" size="1" value="48"> 
+    &nbsp&nbspWpp1: <input type="text" id="inpZap1"> 
+    <button onclick="gerarZap(1)">Gerar Link1</button> 
+    <a href="http://" id="a1" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD2: <input type="text" id="inpddd2" size="1" value="48"> 
+    &nbsp&nbspWpp2: <input type="text" id="inpZap2"> 
+    <button onclick="gerarZap(2)">Gerar Link2</button> 
+    <a href="http://" id="a2" target="_blank">...</a> <br> <br>
+    
+    &nbsp&nbspDDD3: <input type="text" id="inpddd3" size="1" value="48"> 
+    &nbsp&nbspWpp3: <input type="text" id="inpZap3"> 
+    <button onclick="gerarZap(3)">Gerar Link3</button> 
+    <a href="http://" id="a3" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD4: <input type="text" id="inpddd4" size="1" value="48"> 
+    &nbsp&nbspWpp4: <input type="text" id="inpZap4"> 
+    <button onclick="gerarZap(4)">Gerar Link4</button> 
+    <a href="http://" id="a4" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD5: <input type="text" id="inpddd5" size="1" value="48"> 
+    &nbsp&nbspWpp5: <input type="text" id="inpZap5"> 
+    <button onclick="gerarZap(5)">Gerar Link5</button> 
+    <a href="http://" id="a5" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD6: <input type="text" id="inpddd6" size="1" value="48"> 
+    &nbsp&nbspWpp6: <input type="text" id="inpZap6"> 
+    <button onclick="gerarZap(6)">Gerar Link6</button> 
+    <a href="http://" id="a6" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD7: <input type="text" id="inpddd7" size="1" value="48"> 
+    &nbsp&nbspWpp7: <input type="text" id="inpZap7"> 
+    <button onclick="gerarZap(7)">Gerar Link7</button> 
+    <a href="http://" id="a7" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD8: <input type="text" id="inpddd8" size="1" value="48"> 
+    &nbsp&nbspWpp8: <input type="text" id="inpZap8"> 
+    <button onclick="gerarZap(8)">Gerar Link8</button> 
+    <a href="http://" id="a8" target="_blank">...</a> <br> <br>
+
+    &nbsp&nbspDDD9: <input type="text" id="inpddd9" size="1" value="48"> 
+    &nbsp&nbspWpp9: <input type="text" id="inpZap9"> 
+    <button onclick="gerarZap(9)">Gerar Link9</button> 
+    <a href="http://" id="a9" target="_blank">...</a> <br> <br>
+
+    DDD10: <input type="text" id="inpddd10" size="1" value="48"> 
+    Wpp10: <input type="text" id="inpZap10"> 
+    <button onclick="gerarZap(10)">Gerar Link10</button> 
+    <a href="http://" id="a10" target="_blank">...</a> <br> <br>
+
+    <input type="checkbox" name="" id="chkEnter" unchecked> 'Enter' para o link <br><br>
+
+    
+
+    <script>
+        document.getElementById('inpZap1').focus()
+        var inicio = 'https://api.whatsapp.com/send/?phone=55'
+        var fim = '&text=+&app_absent=0'
+        function gerarZap(num)
+        {
+            var meio = document.getElementById('inpZap' + num).value
+            var ddd = document.getElementById('inpddd'+num).value
+            var link = inicio + ddd + meio + fim
+
+            document.getElementById('a'+num).setAttribute('href', link)
+            document.getElementById('a'+num).innerText = 'Whats para: ' + ddd + meio
+
+            document.getElementById('inpZap' + num).value = ''
+            if(document.getElementById('chkEnter').checked)
+            {
+                document.getElementById('a'+num).focus()
+            }else
+            {
+                if(num<10)
+                {
+                    let prox = 'inpZap' + (num+1)
+                    document.getElementById(prox).focus()
+                }else
+                {
+                    document.getElementById('inpZap' + 1).focus()
+                }
+            }
+        }
+        function lerEnter(e)
+        {
+            if(e.key == 'Enter')
+            {
+                // console.log(e);
+                // console.log(e.composedPath()[0].id);
+                let temp = e.composedPath()[0].id
+                let num = ''
+                for(i=6; i<temp.length; i++) num+=temp[i]
+                // console.log(num);
+                gerarZap(Number(num))
+
+            }
+        }
+
+        document.onkeyup = lerEnter
+    </script>
+    <br><br>
+Um oferecimento da EP Floripa e <br>
+
+    <img src="logo_pH.png" alt="Blé!"> <br>
+    <br><br>
+    Obs: este é só um protótipo funcional. Se for útil poderemos um dia embelezar ele, quem sabe...
+
+
+</body>
+</html>
