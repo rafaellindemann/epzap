@@ -110,6 +110,8 @@
         document.getElementById('inpZap1').focus()
         var inicio = 'https://api.whatsapp.com/send/?phone=55'
         var fim = '&text=+&app_absent=0'
+        var save = localStorage.getItem('chkEnter')
+        if(save == 'true') document.getElementById('chkEnter').checked = true
         function gerarZap(num)
         {
             var meio = document.getElementById('inpZap' + num).value
@@ -134,6 +136,8 @@
                     document.getElementById('inpZap' + 1).focus()
                 }
             }
+
+            localStorage.setItem('chkEnter', document.getElementById('chkEnter').checked)
         }
         function lerEnter(e)
         {
