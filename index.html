@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Só mágica :D v2</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
         input{
             border-radius: 5px;
             border-color: orangered;
             /* background-color: #aa5035; */
             background-color: #df4e39;
+            color: whitesmoke;
         }
         button{
             background-color: #df4e39;
+            color: whitesmoke;
             border-radius: 5px;
         }
 
@@ -21,7 +27,7 @@
             background-color: #000000;
             color: whitesmoke;
             /* font-size: 20px; */
-            /* font-family: sans-serif; */
+            
         }
         a{
             color: whitesmoke;
@@ -48,61 +54,75 @@
             height: 10px;
         }
 
+        header{
+            /* align-items: center; */
+            align-content: center;
+        }
+        #inpddd1,#inpddd2,#inpddd3,#inpddd4,#inpddd5,#inpddd6,#inpddd7,#inpddd8,#inpddd9,#inpddd10{
+            width: 2ch;
+        }
+        #outCheckbox{
+            font-size: small;
+        }
+
     </style>
 </head>
 <body>
-    Digita aí os números e deixe a mágica acoontecer :D <BR><BR>
-    &nbsp&nbspDDD1: <input type="text" id="inpddd1" size="1" value="48"> 
+    <header>
+        <img src="logo_pH_header.png" alt="Blé!"> 
+    </header>
+    Digite o número e clique em 'Gerar Link' ou <BR>pressione 'Enter' <BR><BR>
+    &nbspDDD1: <input type="text" id="inpddd1" size="1" value="48"> 
     &nbsp&nbspWpp1: <input type="text" id="inpZap1"> 
     <button onclick="gerarZap(1)">Gerar Link1</button> 
-    <a href="http://" id="a1" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a1" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD2: <input type="text" id="inpddd2" size="1" value="48"> 
+    &nbspDDD2: <input type="text" id="inpddd2" size="1" value="48"> 
     &nbsp&nbspWpp2: <input type="text" id="inpZap2"> 
     <button onclick="gerarZap(2)">Gerar Link2</button> 
-    <a href="http://" id="a2" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a2" target="_blank"></a> <br> <br>
     
-    &nbsp&nbspDDD3: <input type="text" id="inpddd3" size="1" value="48"> 
+    &nbspDDD3: <input type="text" id="inpddd3" size="1" value="48"> 
     &nbsp&nbspWpp3: <input type="text" id="inpZap3"> 
     <button onclick="gerarZap(3)">Gerar Link3</button> 
-    <a href="http://" id="a3" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a3" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD4: <input type="text" id="inpddd4" size="1" value="48"> 
+    &nbspDDD4: <input type="text" id="inpddd4" size="1" value="48"> 
     &nbsp&nbspWpp4: <input type="text" id="inpZap4"> 
     <button onclick="gerarZap(4)">Gerar Link4</button> 
-    <a href="http://" id="a4" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a4" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD5: <input type="text" id="inpddd5" size="1" value="48"> 
+    &nbspDDD5: <input type="text" id="inpddd5" size="1" value="48"> 
     &nbsp&nbspWpp5: <input type="text" id="inpZap5"> 
     <button onclick="gerarZap(5)">Gerar Link5</button> 
-    <a href="http://" id="a5" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a5" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD6: <input type="text" id="inpddd6" size="1" value="48"> 
+    &nbspDDD6: <input type="text" id="inpddd6" size="1" value="48"> 
     &nbsp&nbspWpp6: <input type="text" id="inpZap6"> 
     <button onclick="gerarZap(6)">Gerar Link6</button> 
-    <a href="http://" id="a6" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a6" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD7: <input type="text" id="inpddd7" size="1" value="48"> 
+    &nbspDDD7: <input type="text" id="inpddd7" size="1" value="48"> 
     &nbsp&nbspWpp7: <input type="text" id="inpZap7"> 
     <button onclick="gerarZap(7)">Gerar Link7</button> 
-    <a href="http://" id="a7" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a7" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD8: <input type="text" id="inpddd8" size="1" value="48"> 
+    &nbspDDD8: <input type="text" id="inpddd8" size="1" value="48"> 
     &nbsp&nbspWpp8: <input type="text" id="inpZap8"> 
     <button onclick="gerarZap(8)">Gerar Link8</button> 
-    <a href="http://" id="a8" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a8" target="_blank"></a> <br> <br>
 
-    &nbsp&nbspDDD9: <input type="text" id="inpddd9" size="1" value="48"> 
+    &nbspDDD9: <input type="text" id="inpddd9" size="1" value="48"> 
     &nbsp&nbspWpp9: <input type="text" id="inpZap9"> 
     <button onclick="gerarZap(9)">Gerar Link9</button> 
-    <a href="http://" id="a9" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a9" target="_blank"></a> <br> <br>
 
     DDD10: <input type="text" id="inpddd10" size="1" value="48"> 
-    Wpp10: <input type="text" id="inpZap10"> 
+    &nbspWpp10: <input type="text" id="inpZap10"> 
     <button onclick="gerarZap(10)">Gerar Link10</button> 
-    <a href="http://" id="a10" target="_blank">...</a> <br> <br>
+    <a href="http://" id="a10" target="_blank"></a> <br> <br>
 
-    <input type="checkbox" name="" id="chkEnter" unchecked> 'Enter' para o link <br><br>
+    <input type="checkbox" name="" id="chkEnter" unchecked> <output id="outCheckbox">'Enter' para abrir o link (se desmarcado, 'Enter' passa <br> para a digitação do próximo número)</output>
 
     
 
@@ -156,12 +176,8 @@
 
         document.onkeyup = lerEnter
     </script>
-    <br><br>
-Um oferecimento da EP Floripa e <br>
+    
 
-    <img src="logo_pH.png" alt="Blé!"> <br>
-    <br><br>
-    Obs: este é só um protótipo funcional. Se for útil poderemos um dia embelezar ele, quem sabe...
 
 
 </body>
