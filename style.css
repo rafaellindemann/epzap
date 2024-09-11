@@ -1,0 +1,67 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+input{
+    border-radius: 5px;
+    border-color: orangered;
+    /* background-color: #aa5035; */
+    background-color: #df4e39;
+    color: whitesmoke;
+    font-size: 20px;
+}
+button{
+    background-color: #df4e39;
+    color: whitesmoke;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+body{
+    /* background-color: #000000; */
+    background-color: #101010;
+    color: whitesmoke;
+    /* font-size: 20px; */
+    
+}
+a{
+    color: whitesmoke;
+}
+*:hover{
+    /* border-color: tomato; */
+    border-color: whitesmoke;
+}
+
+/* #chkEnter {
+    
+} */
+#chkEnter{
+    all: unset;
+    border: 1px solid orangered;
+    width: 15px;
+    height: 10px;
+    display: inline-block;
+    color: whitesmoke;
+}
+#chkEnter:checked {
+    background-color: orangered;
+    width: 15px;
+    height: 10px;
+}
+
+header{
+    background-color: #000;
+    margin-bottom: 20px;
+    border: 3px solid orangered;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 60 10px 50px 50px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#inpddd1,#inpddd2,#inpddd3,#inpddd4,#inpddd5,#inpddd6,#inpddd7,#inpddd8,#inpddd9,#inpddd10{
+    width: 2ch;
+}
+#outCheckbox{
+    font-size: small;
+}
